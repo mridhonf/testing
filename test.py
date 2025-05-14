@@ -16,6 +16,14 @@ dC_dK = sp.diff(C, K)
 st.title("Aplikasi Menghitung Biaya Operasional dengan Turunan Parsial")
 
 # --- Input User ---
+    f = sp.sympify(fungsi_str)
+    fx = sp.diff(f, L)
+    fy = sp.diff(f, K)
+
+    st.latex(f"(L, K) = {sp.latex(f)}")
+    st.latex(f"\\frac{{\\partial f}}{{\\partial L}} = {sp.latex(fL)}")
+    st.latex(f"\\frac{{\\partial f}}{{\\partial K}} = {sp.latex(fK)}")
+
 L_val = st.number_input("Jumlah Tenaga Kerja (L)", value=1.0)
 K_val = st.number_input("Jumlah Bahan Baku (K)", value=2.0)
 
