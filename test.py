@@ -6,7 +6,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # --- Simbol ---
 L, K = sp.symbols('L K')
-C = 10*L**2 + 20*K**2 + 5*L*K  # Fungsi biaya
+C = st.text_input("Masukan Fungsi f(L, K) : ", 10*L**2 + 20*K**2 + 5*L*K")  
 
 # --- Turunan Parsial ---
 dC_dL = sp.diff(C, L)
@@ -17,8 +17,8 @@ st.title("Aplikasi Menghitung Biaya Operasional dengan Turunan Parsial")
 
 # --- Input User ---
 f = sp.sympify(C)
-fx = sp.diff(f, L)
-fy = sp.diff(f, K)
+fL = sp.diff(f, L)
+fK = sp.diff(f, K)
 
 st.latex(f"(L, K) = {sp.latex(f)}")
 st.latex(f"\\frac{{\\partial f}}{{\\partial L}} = {sp.latex(fL)}")
