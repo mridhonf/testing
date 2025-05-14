@@ -1,1 +1,4 @@
-# testing
+streamlit
+sympy
+numpy
+matplotlib
