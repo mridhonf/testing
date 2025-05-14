@@ -3,6 +3,7 @@ import sympy as sp
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+except Exception as e:
 
 # --- Simbol ---
 L, K = sp.symbols('L K')
@@ -67,6 +68,4 @@ ax.set_zlabel('Biaya C(L,K)')
 ax.set_title('Grafik Fungsi Biaya dan Bidang Singgung')
 
 st.pyplot(fig)
-
-except Exception as e:
-    st.error(f"Terjadi Kesalahan: {e}")
+st.error(f"Terjadi Kesalahan: {e}")
