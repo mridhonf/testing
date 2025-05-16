@@ -24,8 +24,8 @@ st.latex(f"(L, K) = {sp.latex(f)}")
 st.latex(f"\\frac{{\\partial f}}{{\\partial L}} = {sp.latex(fL)}")
 st.latex(f"\\frac{{\\partial f}}{{\\partial K}} = {sp.latex(fK)}")
 
-L_val = st.number_input("Jumlah Tenaga Kerja (L)", value=1.0)
-K_val = st.number_input("Jumlah Bahan Baku (K)", value=2.0)
+L_val = st.number_input("Jumlah Tenaga Kerja (L)", value=1)
+K_val = st.number_input("Jumlah Bahan Baku (K)", value=2)
 
 # --- Evaluasi Turunan ---
 dC_dL_val = dC_dL.subs({L: L_val, K: K_val})
