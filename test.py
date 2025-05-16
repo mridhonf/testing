@@ -68,4 +68,4 @@ ax.set_zlabel('Biaya C(L,K)')
 ax.set_title('Grafik Fungsi Biaya dan Bidang Singgung')
 
 st.pyplot(fig)
-st.error(f"Terjadi Kesalahan: {e}")
+
